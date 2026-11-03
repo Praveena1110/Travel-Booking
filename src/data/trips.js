@@ -132,4 +132,4 @@ const trips = [
   }
 ];
 
-export default trip;
+export default trips;
