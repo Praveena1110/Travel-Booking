@@ -1,0 +1,135 @@
+
+const trips = [
+  {
+    id: 1,
+    name: "Bali Escape",
+    location: "Bali, Indonesia",
+    category: "Beach",
+    price: 24999,
+    days: 5,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900",
+    description: "Experience tropical beaches, beautiful temples and relaxing sunsets in Bali.",
+    highlights: ["Beach relaxation", "Temple visits", "Sunset views"],
+    itinerary: ["Day 1: Arrival in Bali", "Day 2: Explore Ubud", "Day 3: Beach activities", "Day 4: Temple tour", "Day 5: Departure"]
+  },
+  {
+    id: 2,
+    name: "Mountain Dreams",
+    location: "Manali, India",
+    category: "Mountain",
+    price: 15999,
+    days: 4,
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=900",
+    description: "Enjoy snow-covered mountains, peaceful valleys and exciting adventures in Manali.",
+    highlights: ["Snow activities", "Solang Valley", "Mountain views"],
+    itinerary: ["Day 1: Arrival in Manali", "Day 2: Solang Valley", "Day 3: Local sightseeing", "Day 4: Departure"]
+  },
+  {
+    id: 3,
+    name: "Maldives Paradise",
+    location: "Maldives",
+    category: "Beach",
+    price: 45999,
+    days: 6,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900",
+    description: "Discover crystal-clear waters, luxury island resorts and beautiful marine life.",
+    highlights: ["Water villa stay", "Snorkelling", "Island cruise"],
+    itinerary: ["Day 1: Arrival", "Day 2: Island exploration", "Day 3: Snorkelling", "Day 4: Water activities", "Day 5: Relaxation", "Day 6: Departure"]
+  },
+  {
+    id: 4,
+    name: "Dubai Adventure",
+    location: "Dubai, UAE",
+    category: "City",
+    price: 32999,
+    days: 5,
+    rating: 4.7,
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900",
+    description: "Explore modern architecture, desert adventures and exciting city attractions.",
+    highlights: ["Burj Khalifa", "Desert safari", "Dubai Mall"],
+    itinerary: ["Day 1: Arrival", "Day 2: City tour", "Day 3: Desert safari", "Day 4: Shopping", "Day 5: Departure"]
+  },
+  {
+    id: 5,
+    name: "Swiss Wonders",
+    location: "Switzerland",
+    category: "Mountain",
+    price: 79999,
+    days: 7,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=900",
+    description: "Explore stunning Alpine mountains, scenic train journeys and charming villages.",
+    highlights: ["Alpine views", "Scenic train ride", "Lake sightseeing"],
+    itinerary: ["Day 1: Arrival", "Day 2: Zurich tour", "Day 3: Lucerne", "Day 4: Interlaken", "Day 5: Jungfraujoch", "Day 6: Shopping", "Day 7: Departure"]
+  },
+  {
+    id: 6,
+    name: "Thailand Explorer",
+    location: "Phuket, Thailand",
+    category: "Adventure",
+    price: 28999,
+    days: 5,
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=900",
+    description: "Enjoy island hopping, tropical beaches and exciting water sports in Thailand.",
+    highlights: ["Island hopping", "Water sports", "Beach activities"],
+    itinerary: ["Day 1: Arrival", "Day 2: Phuket tour", "Day 3: Phi Phi Islands", "Day 4: Water activities", "Day 5: Departure"]
+  },
+  {
+    id: 7,
+    name: "Paris Romantic Escape",
+    location: "Paris, France",
+    category: "City",
+    price: 55999,
+    days: 6,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900",
+    description: "Experience romantic streets, iconic landmarks and beautiful French culture.",
+    highlights: ["Eiffel Tower", "Louvre Museum", "Seine River cruise"],
+    itinerary: ["Day 1: Arrival", "Day 2: Eiffel Tower", "Day 3: Louvre Museum", "Day 4: City tour", "Day 5: Shopping", "Day 6: Departure"]
+  },
+  {
+    id: 8,
+    name: "Ooty Nature Retreat",
+    location: "Ooty, India",
+    category: "Nature",
+    price: 11999,
+    days: 3,
+    rating: 4.7,
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900",
+    description: "Relax among green hills, tea gardens and beautiful mountain landscapes.",
+    highlights: ["Tea gardens", "Botanical Garden", "Ooty Lake"],
+    itinerary: ["Day 1: Arrival and sightseeing", "Day 2: Botanical Garden and Ooty Lake", "Day 3: Tea garden visit and departure"]
+  },
+  {
+    id: 9,
+    name: "Singapore City Lights",
+    location: "Singapore",
+    category: "City",
+    price: 38999,
+    days: 4,
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=900",
+    description: "Discover futuristic gardens, iconic buildings and vibrant city attractions.",
+    highlights: ["Marina Bay Sands", "Gardens by the Bay", "Sentosa Island"],
+    itinerary: ["Day 1: Arrival", "Day 2: Marina Bay tour", "Day 3: Sentosa Island", "Day 4: Shopping and departure"]
+  },
+  {
+    id: 10,
+    name: "Kerala Backwater Bliss",
+    location: "Alleppey, India",
+    category: "Nature",
+    price: 18999,
+    days: 4,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=900",
+    description: "Enjoy peaceful backwaters, traditional houseboats and beautiful Kerala landscapes.",
+    highlights: ["Houseboat stay", "Backwater cruise", "Kerala cuisine"],
+    itinerary: ["Day 1: Arrival", "Day 2: Houseboat experience", "Day 3: Village exploration", "Day 4: Departure"]
+  }
+];
+
+export default trips;
